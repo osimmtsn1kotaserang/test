@@ -98,14 +98,42 @@ nav a:hover{
     transition: all 0.3s ease;
 }
 
-@media (max-width: 768px){
+@media (max-width:768px){
 
-    nav a{
-        display: none;
+    .nav a{
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 20px;
+
+        background: rgba(255,255,255,0.08);
+
+        backdrop-filter: blur(12px);
+
+        border: 1px solid rgba(255,255,255,0.2);
+
+        border-radius: 0 0 20px 20px;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-15px);
+
+        transition: all 0.3s ease;
     }
 
-    .menu{
-        display: block;
+    .nav a.active{
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
     }
 
 }
